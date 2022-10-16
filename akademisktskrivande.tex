@@ -1,0 +1,212 @@
+.% book example for classicthesis.sty
+\documentclass[11pt,a5paper,footinclude=true,headinclude=true]{scrbook} % KOMA-Script book
+\synctex=1
+\usepackage[T1]{fontenc}
+\usepackage{lipsum}
+\usepackage[linedheaders,parts,pdfspacing]{classicthesis} % ,manychapters
+%\usepackage[osf]{libertine}
+\usepackage{fancyhdr}
+\usepackage{datetime}
+\usepackage{amsthm}
+\usepackage[utf8]{inputenc}
+\usepackage[swedish]{babel}
+\usepackage[style=verbose,authoryear,backend=biber,natbib=true]{biblatex}
+\usepackage{graphicx}
+
+%\usepackage{titlesec}
+%\titlespacing*\section{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt} % storlek på padding efter \section
+%\titlespacing*\subsubsection{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}[style=verbose]
+
+%\usepackage{polyglossia}
+%\setmainlanguage{italian}
+%\PolyglossiaSetup{italian}{indentfirst=false}
+
+
+%grekiska
+\usepackage[LGR,T1]{fontenc} \usepackage[utf8]{inputenc}
+\newcommand{\textgreek}[1]{\begingroup\fontencoding{LGR}\selectfont#1\endgroup}
+%/grekiska
+
+\usepackage{lipsum,etoolbox}
+\AtBeginEnvironment{quote}{\small}% Step font down one size relative to current font.
+\AtBeginEnvironment{quote}{\vspace{-.25\baselineskip}}% Stuff before {quote}
+\AtEndEnvironment{quote}{\vspace{0\baselineskip}}% Stuff after {quote}
+
+
+%referenser
+\graphicspath{ {/home/anon/Dropbox/akademisktskrivande/images/} }
+\addbibresource{/home/anon/Dropbox/klassiskmodern/bibliography.bib}
+
+% datum och tid i footer och numrering
+\fancyhf{}
+\fancyfoot[L]{\scriptsize{Utkast: \today\ \currenttime}}
+\fancyfoot[R]{\scriptsize{\thepage}}
+\pagestyle{fancy}
+
+
+
+\begin{document}
+\booktitle{\begin{center}
+\thispagestyle{empty}
+\begin{LARGE}
+Akademiskt skrivande\\
+
+\end{LARGE}
+
+\bigskip
+En praktisk guide
+\bigskip
+\bigskip
+\bigskip
+
+\includegraphics[scale=.451]{linnehalv}
+
+\begin{tiny}
+\noindent Linnæus, C. (1735) \emph{Systema naturæ, sive regna tria naturæ systematice proposita per classes, ordines, genera, & species}, Lugduni Batavorum: Haak.
+\end{tiny}
+\end{center}
+
+\bigskip
+\bigskip
+\bigskip
+
+\begin{tiny}
+\noindent Christopher Kullenberg
+
+\noindent \href{https://github.com/christopherkullenberg/akademisktskrivande}{https://github.com/christopherkullenberg/akademisktskrivande}
+
+\noindent Licens: GNU General Public License v3.0
+\end{tiny}
+
+	\tableofcontents
+	\thispagestyle{empty}
+
+
+
+
+
+
+    \chapter{Referenser och röstseparering}
+
+Videoversion: \href{https://youtu.be/lJbH-CLiLY0}{https://youtu.be/lJbH-CLiLY0}
+
+\section{Refererande i allmänhet}
+
+När man skriver en akademiskt text är man i princip alltid beroende av vad andra har sagt före en själv. Det kan handla om andra forskares resultat, metoder, teorier eller källor hämtade från arkiv, databaser eller från internet. Varje gång man hänvisar till någon annans arbete \textbf{måste} man göra en korrekt referens. Det finns flera anledningar till varför så är fallet:
+
+\begin{small}
+\begin{enumerate}
+\item Det måste vara tydligt vilka tidigare arbeten du bygger på.
+\item Det måste framgå vilka tankar och resultat som är dina och vilka som  är andras. 
+\item Undvika plagiat.
+\item Det är god sed att referera som en service till läsaren så att det blir enkelt att granska och bygga vidare på texten. 
+\end{enumerate}
+\end{small}
+
+\noindent Finns det situationer när man inte behöver referera? Svaret är ja i följande två undantag: För det första behöver man inte referera när man skriver fram sina egna tankar eller resultat (eftersom man själv står som författare till texten). Exempelvis:
+
+\begin{quote}
+``Jag observerade två kattugglor i Renströmsparken den 16 oktober 2022''
+
+``Jag anser att Einsteins fysik är överlägsen Newtons''
+\end{quote}
+
+\noindent I båda dessa fall har jag tydligt angett att jag i det första exemplet själv har genomfört observationen och att det i andra fallet uttrycks en personlig åsikt. 
+
+För det andra behövs det heller ingen referens när man uttrycker något som är allmänt känt, exempelvis:
+
+\begin{quote}
+``Polonium upptäcktes av Marie Curie.''
+
+``Kokpunkten för vatten är 100 grader Celsius vid havsnivå.''
+\end{quote}
+
+\noindent Vad som är allmänt känt varierar dock beroende på vem som är den tänkta läsaren. En fysiker, en matematiker och en historiker kommer att som läsare betrakta olika saker som allmängods. Som tänkta läsare kommer de även ha olika krav på hur noga och när man bör ange en referens. 
+
+\section{Vad är en korrekt referens?}
+
+Den grundläggande och överordnade principen för att referera är att man ska kunna hitta den källa som åberopas. Exakt hur och med vilken stil man gör det är mindre viktigt, bara man är konsekvent och håller sig till samma stil genom hela texten. 
+
+I löpande brödtext är de två vanligaste sätten att man antingen använder namn-årtal (Svensson, 2022) eller att man gör en fotnot. Vid direkta citat anger man även sidnummer, och ibland ett omfång av sidor när man hänvisar till en viss del av verket. 
+
+I slutet av varje text, eller i vissa fall i fotnoter, så gör man en litteraturlista. Här ska allt man behöver för att hitta källan finnas. Grundläggande för böcker är:
+
+\begin{small}
+\begin{itemize}
+\item Författare
+\item Årtal
+\item Titel
+\item Förlag
+\item Utgivningsort
+\end{itemize}
+\end{small}
+
+\noindent Därefter har olika källor ytterligare minimikrav:
+
+\begin{small}
+\begin{itemize}
+\item Tidskriftsartiklar behöver även volym och nummer, samt gärna även DOI-nummer.
+\item Internetkällor behöver förutom URL även datum för när källan hämtades.
+\item  Databaser, kod-repositories och outgivna källor kan ha sina specifika sätt att hänvisa till. Här får man läsa på från fall till fall.
+\end{itemize}
+\end{small}
+
+\noindent Det rekommenderas varmt att använda en referenshanterare för att hålla ordning på referenserna och snabbare kunna producera sorterade referenslistor. Det finns flera varianter, både de som är gratis och som kostar pengar, öppen eller stängd källkod och klient- respektive webbaserade tjänster. 
+
+\section{Röstseparering och referenser}
+
+En text består egenligen inte av olika ``röster'', det är ju trots allt fråga om det skrivna ordet snarare än det talade eller sjungna. Men det kan ändå vara användbart att tänka i termer av att en välskriven akademisk text innehåller inte bara många röster, utan även har ordnat dessa tydligt och med en slags harmoni som gör att man enkelt kan följa röst för röst genom texten. 
+
+Den enklaste formen av röstseparering kan exemplifieras med:
+
+\begin{quote}
+``Ptolemaios hade en geocentrisk världsbild, medan Kopernikus förespråkade en heliocentrisk modell.''
+\end{quote}
+
+\noindent Detta ger oss två röster som är tydligt separerade. Man kan även se det som tre röster, eftersom jag som författare till meningen ju är den som fogat samman Ptolemaios och Kopernikus. 
+
+Vi kan lägga till ytterligare en röst:
+
+\begin{quote}
+\textcolor{red}{Ptolemaios} hade en geocentrisk världsbild, medan \textcolor{red}{Kopernikus} förespråkade en heliocentrisk modell. Skiftet mellan dessa två världsbilder kallade \textcolor{red}{Thomas Kuhn} för vetenskapliga revolutioner \footcite{kuhnVetenskapligaRevolutionernasStruktur1979}.
+\end{quote}
+
+\noindent I fallen med Ptolemaios och Kopernikus kan dessa påståenden betraktas som allmängods, de behöver ingen direkt referens till originalverken. Men när det kommer till Kuhns begrepp är det både tydligare och mera korrekt att ge en exakt referens till boken \emph{De vetenskapliga revolutionernas struktur}.
+
+Om vi däremot citerar direkt ur en källa måste vi alltid ange en full referens inklusive vilken eller vilka sidor vi har hämtat citatet ifrån:
+
+\begin{quote}
+Med dagens mått mätt förefaller metodkapitlet i \textcolor{red}{\emph{Systema Naturæ}} vara både kortfattat och kryptiskt. Ur den engelska översättningen från 1806 lyder det i sin helhet:
+
+\begin{quote}
+\begin{footnotesize}
+[T]he soul of Science, indicates that every natural body may, by inspection, be known by its own peculiar name; and this name points out whatever the industry of man has been able to discover concerning it: so that amidst the greatest apparent confusion, the greatest order is visible \footcite[s. 3]{linneGeneralSystemNature1806}.
+\end{footnotesize}
+\end{quote}
+
+\noindent Vid direkta citat måste vi vara nogranna, speciellt när det rör sig om källor som har utkommit i flera olika utgåvor och översättningar. I detta fall har vi tydligt angett att det är den specifika engelska översättningen från 1806 som vi citerar ur, så att den som granskar citatet kan gå tillbaka till originalet. Två röster förekommer, dels min korta kommentar om att metodkapitlet förefaller vara ``kortfattat och kryptiskt'' och sedan kommer Linnés originalröst (om än översatt till engelska).
+
+
+\section{Bättre text genom referenser och röstseparering}
+
+Att göra korrekta referenser är enkelt, men kanske mördande tråkigt. Röstseparering är lite svårare, men man får snart till det rätt om man övar lite. Det är alltså ganska små saker, men de har mycket stora effekter på texten som helhet. 
+
+För det första blir den akademiska texten mera korrekt i formell mening. Detta på grund av att texten nu åberopar andra texter på ett sätt som gör att den kan dra nytta av tidigare forskning. En text med många referenser är ofta en text som vilar på en solid grund av inläsning och förståelse för det problem man skriver om. 
+
+För det andra ligger det i det analytiska tänkandets struktur att tänka i termer av ``röster''. Det är när vi jämför, kontrasterar och diskuterar flera olika idéer, resultat eller metoder, som vi gör det möjligt att tänka nytt och självständigt. 
+
+    
+    \chapter{Röd tråd och stringens}
+
+
+
+        
+    \chapter{Vetenskapligt språk}
+            
+    \chapter{Revisioner och redigering}
+    
+    
+    
+
+\printbibliography
+\end{document}
