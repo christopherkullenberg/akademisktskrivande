@@ -1,4 +1,4 @@
-.% book example for classicthesis.sty
+% book example for classicthesis.sty
 \documentclass[11pt,a5paper,footinclude=true,headinclude=true]{scrbook} % KOMA-Script book
 \synctex=1
 \usepackage[T1]{fontenc}
@@ -12,52 +12,27 @@
 \usepackage[swedish]{babel}
 \usepackage[style=verbose,authoryear,backend=biber,natbib=true]{biblatex}
 \usepackage{graphicx}
-
-%\usepackage{titlesec}
-%\titlespacing*\section{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt} % storlek på padding efter \section
-%\titlespacing*\subsubsection{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}[style=verbose]
-
-%\usepackage{polyglossia}
-%\setmainlanguage{italian}
-%\PolyglossiaSetup{italian}{indentfirst=false}
-
-
-%grekiska
-\usepackage[LGR,T1]{fontenc} \usepackage[utf8]{inputenc}
-\newcommand{\textgreek}[1]{\begingroup\fontencoding{LGR}\selectfont#1\endgroup}
-%/grekiska
-
-\usepackage{lipsum,etoolbox}
-\AtBeginEnvironment{quote}{\small}% Step font down one size relative to current font.
-\AtBeginEnvironment{quote}{\vspace{-.25\baselineskip}}% Stuff before {quote}
-\AtEndEnvironment{quote}{\vspace{0\baselineskip}}% Stuff after {quote}
-
-
-%referenser
 \graphicspath{ {/home/anon/Dropbox/akademisktskrivande/images/} }
 \addbibresource{/home/anon/Dropbox/klassiskmodern/bibliography.bib}
-
-% datum och tid i footer och numrering
-\fancyhf{}
+\fancyhf{} % datum och tid i footer och numrering
 \fancyfoot[L]{\scriptsize{Utkast: \today\ \currenttime}}
 \fancyfoot[R]{\scriptsize{\thepage}}
 \pagestyle{fancy}
 
 
 
+
 \begin{document}
-\booktitle{\begin{center}
 \thispagestyle{empty}
+\begin{center}
 \begin{LARGE}
-Akademiskt skrivande\\
+\booktitle{Akademiskt skrivande}
 
 \end{LARGE}
 
 \bigskip
 En praktisk guide
-\bigskip
-\bigskip
-\bigskip
+
 
 \includegraphics[scale=.451]{linnehalv}
 
