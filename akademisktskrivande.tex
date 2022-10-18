@@ -18,16 +18,14 @@
 \fancyfoot[L]{\scriptsize{Utkast: \today\ \currenttime}}
 \fancyfoot[R]{\scriptsize{\thepage}}
 \pagestyle{fancy}
-
-
+\usepackage{atbegshi} % ta bort blanka sidor
 
 
 \begin{document}
 \thispagestyle{empty}
 \begin{center}
 \begin{LARGE}
-\booktitle{Akademiskt skrivande}
-
+Akademiskt skrivande
 \end{LARGE}
 
 \bigskip
@@ -36,32 +34,37 @@ En praktisk guide
 
 \includegraphics[scale=.451]{linnehalv}
 
-\begin{tiny}
-\noindent Linnæus, C. (1735) \emph{Systema naturæ, sive regna tria naturæ systematice proposita per classes, ordines, genera, & species}, Lugduni Batavorum: Haak.
-\end{tiny}
+\begin{scriptsize}
+\noindent Linnæus, C. (1735) \emph{Systema naturæ, sive regna tria naturæ systematice proposita per classes, ordines, genera, \& species}, Lugduni Batavorum: Haak.
+\end{scriptsize}
 \end{center}
 
 \bigskip
 \bigskip
 \bigskip
 
-\begin{tiny}
+\begin{scriptsize}
 \noindent Christopher Kullenberg
 
-\noindent \href{https://github.com/christopherkullenberg/akademisktskrivande}{https://github.com/christopherkullenberg/akademisktskrivande}
+\noindent Senaste versionen: \href{https://github.com/christopherkullenberg/akademisktskrivande}{https://github.com/christopherkullenberg/akademisktskrivande}
 
 \noindent Licens: GNU General Public License v3.0
-\end{tiny}
+\end{scriptsize}
+
+\newpage %ny sida
+\AtBeginShipoutNext{\AtBeginShipoutDiscard}% Discard next blank page
 
 	\tableofcontents
 	\thispagestyle{empty}
 
+\newpage %ny sida
+\AtBeginShipoutNext{\AtBeginShipoutDiscard}% Discard next blank page
 
 
 
 
 
-    \chapter{Referenser och röstseparering}
+\chapter{Referenser och röstseparering}
 
 Videoversion: \href{https://youtu.be/lJbH-CLiLY0}{https://youtu.be/lJbH-CLiLY0}
 
@@ -151,11 +154,10 @@ Vi kan lägga till ytterligare en röst:
 Om vi däremot citerar direkt ur en källa måste vi alltid ange en full referens inklusive vilken eller vilka sidor vi har hämtat citatet ifrån:
 
 \begin{quote}
-Med dagens mått mätt förefaller metodkapitlet i \textcolor{red}{\emph{Systema Naturæ}} vara både kortfattat och kryptiskt. Ur den engelska översättningen från 1806 lyder det i sin helhet:
-
-\begin{quote}
 \begin{footnotesize}
-[T]he soul of Science, indicates that every natural body may, by inspection, be known by its own peculiar name; and this name points out whatever the industry of man has been able to discover concerning it: so that amidst the greatest apparent confusion, the greatest order is visible \footcite[s. 3]{linneGeneralSystemNature1806}.
+Med dagens mått mätt förefaller metodkapitlet i \textcolor{red}{\emph{Systema Naturæ}} vara både kortfattat och kryptiskt. Ur den engelska översättningen från 1806 lyder det i sin helhet: 
+\\ 
+``[T]he soul of Science, indicates that every natural body may, by inspection, be known by its own peculiar name; and this name points out whatever the industry of man has been able to discover concerning it: so that amidst the greatest apparent confusion, the greatest order is visible.'' \footcite[s. 3]{linneGeneralSystemNature1806}
 \end{footnotesize}
 \end{quote}
 
@@ -181,7 +183,6 @@ För det andra ligger det i det analytiska tänkandets struktur att tänka i ter
     \chapter{Revisioner och redigering}
     
     
-    
-
 \printbibliography
+
 \end{document}
