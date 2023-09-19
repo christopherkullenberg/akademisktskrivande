@@ -1,5 +1,5 @@
 % book example for classicthesis.sty
-\documentclass[11pt,a5paper,footinclude=true,headinclude=true]{scrbook} % KOMA-Script book
+\documentclass[11pt,a4paper,footinclude=true,headinclude=true]{report} % KOMA-Script book
 \synctex=1
 \usepackage[T1]{fontenc}
 \usepackage{lipsum}
@@ -9,11 +9,12 @@
 \usepackage{amsthm}
 \usepackage[utf8]{inputenc}
 \usepackage[swedish]{babel}
-\usepackage[style=verbose,authoryear,backend=biber,natbib=true]{biblatex}
+\usepackage[style=verbose,backend=biber,natbib=true]{biblatex}
 \usepackage{graphicx}
 \graphicspath{ {/home/anon/Dropbox/akademisktskrivande/images/} }
 \addbibresource{/home/anon/Dropbox/klassiskmodern/bibliography.bib}
 \usepackage{atbegshi} % ta bort blanka sidor
+
 
 
 \begin{document}
@@ -26,12 +27,22 @@ Akademiskt skrivande
 \bigskip
 En praktisk guide
 
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
 
-\includegraphics[scale=.451]{linnehalv}
 
-\begin{scriptsize}
-\noindent Linnæus, C. (1735) \emph{Systema naturæ, sive regna tria naturæ systematice proposita per classes, ordines, genera, \& species}, Lugduni Batavorum: Haak.
-\end{scriptsize}
+\includegraphics[scale=.351]{akademisktskrivande.jpeg}
+\bigskip
+\\
+
+
+%\begin{tiny}
+%\noindent Linnæus, C. (1735) \emph{Systema naturæ, sive regna tria naturæ %systematice proposita per classes, ordines, genera, \& species}, Lugduni %Batavorum: Haak.
+%\end{tiny}
 \end{center}
 
 \bigskip
@@ -44,7 +55,7 @@ En praktisk guide
 \noindent Senaste versionen: \href{https://github.com/christopherkullenberg/akademisktskrivande}{https://github.com/christopherkullenberg/akademisktskrivande}
 \noindent Denna kompilering: \today
 \\
-\noindent Licens: GNU General Public License v3.0
+\noindent Licens: GNU General Public License v3.0 
 \end{scriptsize}
 
 \newpage %ny sida
@@ -55,7 +66,7 @@ En praktisk guide
 
 \newpage %ny sida
 \AtBeginShipoutNext{\AtBeginShipoutDiscard}% Discard next blank page
-
+%
 
 
 
@@ -168,12 +179,47 @@ För det första blir den akademiska texten mera korrekt i formell mening. Detta
 
 För det andra ligger det i det analytiska tänkandets struktur att tänka i termer av ``röster''. Det är när vi jämför, kontrasterar och diskuterar flera olika idéer, resultat eller metoder, som vi gör det möjligt att tänka nytt och självständigt. 
 
+Avslutningsvis kan vi ta ett lite svårare exempel. Gilles Deleuze skrev 1990 en essä med titeln \textit{Postskriptum om kontrollsamhällena}. Den innehåller flera röster som går att färgkoda enligt följande: 
+
+\begin{quote}
+Kontrollsamhällena håller på att ersätta de disciplinära samhällena. \textcolor{red}{»Kontroll« är det ord som Burroughs använder för att beteckna detta nya monster}, och som \textcolor{orange}{Foucault utpekade som vår nära framtid}. Även \textcolor{Plum}{Paul Virilio har under lång tid analyserat de ultrasnabba formerna for kontroll i det fria, vilka ersätter de gamla disciplinerna som opererar inom der slutna systemets tid}. Vi behöver inte åberopa de extraordinära nya farmaceutiska produkterna, de nukleära teknologierna eller de genetiska manipulationerna, även om också de kommer att intervenera i denna nya process. Inte heller finns det anledning att fråga vilken regim som är hårdast eller mest uthärdlig, ty i båda två finns en motsats mellan frihet och underkastelse. \footcite[s. 185-6]{deleuzeNomadologin1998}
+\end{quote}
+
+I detta stycke finner vi alltså fyra röster: Deleuze själv (svart), Burroughs (röd), Foucault (orange) och Virilio (lila). Denna tydliga röstseparering skapar en komprimerad röd tråd som samtidigt ger en riktning åt författarens tankebana. Men det saknas en viktig detalj för att detta stycke ska uppfylla kriterierna för akademiskt skrivande. Trots att rösterna är välseparerade så saknas de detaljerade referenserna. Var någonstans sade Burroughs\footcite{burroughsElectronicRevolution2001}, Foucault och Virilio\footcite{virilioSpeedPolitics2006} det som de sade? Läsaren måste själv göra detta arbete, och hoppas på att rätt verk har kunnat hittas. 
+
+
+
+%\printbibliography
+\printbibliography[heading=subbibliography]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
     \chapter{Röd tråd och stringens}
 
+\noindent När man skriver akademiskt text är det viktigt att man följer en röd tråd i sitt skrivande. Detta kallas ibland för stringens. Det finns tre skäl till varför detta är viktigt.\\
+\indent För det första hjälper en röd tråd dig att tänka mera klart och tydligt. Ibland är man redan innan man formulerar sig i skrift inte helt och hållet  klar över vad man vill säga. Då kan man använda sig av en röd tråd för att använda sig av textens ordnande funktion för att hjälpa tankens mera fluktuerande struktur.\\
+\indent För det andra bör man alltid skriva så tydligt och logiskt som möjligt för att göra det lättare för en läsare eller granskare av din text att förstå och bedöma det du skriver. \\
+\indent För det tredje gör man sig själv en tjänst i det framtida arbetet med texten, från det att man har skrivit ett första utkast till att man reviderar och redigerar fram ett färdigt manuskript. En rörig text är mycket svårare att förbättra än en som redan har en tydlig struktur. Alltså, man tjänar mycket tid och energi på att följa en röd tråd redan från början.
+
+
+
+
+
+
 
 \section{Delar och helheten}
-
 
 
 \section{Stycken och rubriker}
@@ -182,11 +228,32 @@ För det andra ligger det i det analytiska tänkandets struktur att tänka i ter
 
 \section{Typer av röda trådar}
         
-    \chapter{Vetenskapligt språk}
-            
+
+
+
+
+\chapter{Vetenskapligt språk}
+           
+           Metaregel: vetenskapligt språk beror på \textbf{vem} som är läsaren.
+
+\section{Ordval}
+talspråk skriftspråk pronomen
+\section{Tydlighet}
+Tydlighetskriteriet undvika motsägelser 
+\section{Exakthet}
+exakthet och precision, vikten av definitioner
+\section{Stilistik}
+vad kännetecknar akademisk stil och vilka risker finns det att frångå den
+
+
+
+
+
+
+
     \chapter{Revisioner och redigering}
     
     
-\printbibliography
+ 
 
 \end{document}
